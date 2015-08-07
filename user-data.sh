@@ -10,5 +10,6 @@ sudo cp /home/ubuntu/mongo-startup/update_replica_set.py /home/ubuntu/janes-scra
 cd /home/ubuntu/janes-scraper
 sudo pip install pymongo mechanize cookiejar BeautifulSoup html2text # dependencies
 sudo screen -dm bash -c "sudo python janes-scraper.py"
-sudo cp run-janes-scraper.sh /etc/cron.hourly/run-janes-scraper.sh
-sudo crond
+sudo cp run-janes-scraper.sh /etc/cron.hourly/run-janes-scraper
+sudo chmod 755 /etc/cron.hourly/run-janes-scraper
+sudo cron
